@@ -20,24 +20,23 @@ class CopyListWithRandomPointer {
         Map<Node, Node> map = new HashMap<>();
         Node oldNode = head;
         Node newNode = new Node(oldNode.val);
-        map.put(head, newNode);
+        map.put(oldNode, newNode);
         while(oldNode != null) {
             newNode.random = getClone(oldNode.random, map);
-            newNode.next = getClone(oldNode.random, map);
-            oldNode = oldNode.next;
+            newNode.next = getClone(oldNode.next, map);
             newNode = newNode.next;
+            oldNode = oldNode.next;
         }
         return map.get(head);
     }
-
+    
     private Node getClone(Node node, Map<Node, Node> map) {
-        if (node != null) {
-            if (map.containsKey(node)) {
-                return map.get(node);
-            }
-            map.put(node, new TreeNode(node.val, null, null));
-            return map.get(node);
+        if (node == null) {
+            return null;
         }
-        return null;
+        if (!map.containsKey(node)) {
+            map.put(node, new Node(node.val, null, null));
+        }
+        return map.get(node);
     }
 }
