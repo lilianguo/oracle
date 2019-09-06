@@ -99,7 +99,7 @@ MOVE ON了！
 Onsite：
      OCI很注重Culture fit，所以onsite之前，一定要把Recruiter发的OCI的Value好好看看，然后结合下自己的工作经历。
      第一轮：
-             BQ + 算法。算法是Leetcode 1091， 我其实并没有做得很好，我觉得最重要是交流，并不会要求Code无bug啥的。
+Doing             BQ + 算法。算法是Leetcode 1091， 我其实并没有做得很好，我觉得最重要是交流，并不会要求Code无bug啥的。
      第二轮：
              BQ + 算法。算法是binary tree 的in-order traversal。follow up是实现morris的写完，在交流的情况下写完了。
      第三轮：
@@ -120,3 +120,5 @@ DP done: maximal square 利口儿儿要，
 
 DP done: coin change II 利口五一吧。
 都是dp
+
+算法是Leetcode 1091， Shortest path in binary matrix 
