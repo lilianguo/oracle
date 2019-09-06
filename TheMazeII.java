@@ -1,52 +1,58 @@
 import java.util.Queue;
 
 class TheMazeII {
+    int[] dx = {0, 0, -1, 1};
+    int[] dy = {1, -1, 0, 0};
     public int shortestDistance(int[][] maze, int[] start, int[] destination) {
+        // write your code here
         int m = maze.length;
         int n = maze[0].length;
-        boolean[][] visited = new boolean[m][n];
-        PriorityQueue<Position> queue = new PriorityQueue<Position>((p1, p2) -> (p1.distance - p2.distance));
-        queue.add(new Position(start[0], start[1], 0));
-        int[] dir_x = {1, 0, -1, 0};
-        int[] dir_y = {0, 1, 0, -1};
-        while(!queue.isEmpty()) {
-            Position curr = queue.poll();
-            int x = curr.x;
-            int y = curr.y;
-            if (x == destination[0] && y == destination[1]) {
-                return curr.distance;
+
+        PriorityQueue<Posn> q = new PriorityQueue<Posn>((p1, p2)->(p1.len - p2.len));
+        q.offer(new Posn(start[0], start[1], 0));
+        boolean[][] visit = new boolean[m][n];
+
+        while(!q.isEmpty()){
+          
+
+            
+            Posn cur = q.poll();
+            int x = cur.x;
+            int y = cur.y;
+            if(x == destination[0] && y == destination[1]){
+                return cur.len;
             }
-            if (visited[x][y]) {
+            if(visit[x][y]){
                 continue;
             }
-            visited[x][x] = true;
-            for (int i = 0; i < 4; i++) {
-                int nx = curr.x;
-                int ny = curr.y;
-                int len = curr.distance;
-                while(nx >= 0 && nx < m && ny >= 0 && ny < n && maze[nx][ny] == 0) {
-                    nx += dir_x[i];
-                    ny += dir_y[i];
+            visit[x][y] = true;
+            for(int i = 0; i < 4; i++){
+                int nx = x;
+                int ny = y;
+                int len = cur.len;
+                while(nx >= 0 && nx < m  && ny >= 0 && ny < n && maze[nx][ny] == 0){
+                    nx += dx[i];
+                    ny += dy[i];
                     len++;
                 }
-                nx -= dir_x[i];
-                ny -= dir_y[i];
                 len--;
-                queue.add(new Position(nx, ny, len));
-                
+                nx -= dx[i];
+                ny -= dy[i];
+                q.offer(new Posn(nx, ny, len));
+                         
             }
         }
-        return -1;
+        return -1;   
     }
+}
 
-    class Position {
-        int x;
-        int y;
-        int distance;
-        public Position(int x, int y, int distance) {
-            this.x = x;
-            this.y = y;
-            this.distance = distance;
-        }
+class Posn{
+    int x;
+    int y;
+    int len;
+    public Posn(int a, int b, int len){
+        x = a;
+        y = b;
+        this.len = len;
     }
 }
