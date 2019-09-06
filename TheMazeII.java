@@ -1,52 +1,39 @@
 import java.util.Queue;
 
 class TheMazeII {
+    // DFS solution
+    // space O(mn)
+    // time O(mn*max(m,n)): Complete traversal of maze will be done in the worst case. 
+    // Here, m and n refers to the number of rows and columns of the maze. 
+    // Further, for every current node chosen, we can travel upto a maximum depth of max(m,n) in any direction.
     public int shortestDistance(int[][] maze, int[] start, int[] destination) {
-        int m = maze.length;
-        int n = maze[0].length;
-        boolean[][] visited = new boolean[m][n];
-        PriorityQueue<Position> queue = new PriorityQueue<Position>((p1, p2) -> (p1.distance - p2.distance));
-        queue.add(new Position(start[0], start[1], 0));
-        int[] dir_x = {1, 0, -1, 0};
-        int[] dir_y = {0, 1, 0, -1};
-        while(!queue.isEmpty()) {
-            Position curr = queue.poll();
-            int x = curr.x;
-            int y = curr.y;
-            if (x == destination[0] && y == destination[1]) {
-                return curr.distance;
-            }
-            if (visited[x][y]) {
-                continue;
-            }
-            visited[x][x] = true;
-            for (int i = 0; i < 4; i++) {
-                int nx = curr.x;
-                int ny = curr.y;
-                int len = curr.distance;
-                while(nx >= 0 && nx < m && ny >= 0 && ny < n && maze[nx][ny] == 0) {
-                    nx += dir_x[i];
-                    ny += dir_y[i];
-                    len++;
-                }
-                nx -= dir_x[i];
-                ny -= dir_y[i];
-                len--;
-                queue.add(new Position(nx, ny, len));
-                
-            }
+        int[][] distance = new int[maze.length][maze[0].length];
+        for (int[] row : distance) {
+            Arrays.fill(row, Integer.MAX_VALUE);
         }
-        return -1;
+        distance[start[0]][start[1]] = 0;
+        dfs(maze, start, distance);
+        return distance[destination[0]][destination[1]] == Integer.MAX_VALUE ? -1 : distance[destination[0]][destination[1]];
     }
 
-    class Position {
-        int x;
-        int y;
-        int distance;
-        public Position(int x, int y, int distance) {
-            this.x = x;
-            this.y = y;
-            this.distance = distance;
+    private void dfs(int[][] maze, int[] start, int[][] distance) {
+        int[][] dirs = {{0,1}, {0,-1}, {-1,0}, {1,0}};
+        for (int[] dir : dirs) {
+            int x = start[0] + dir[0];
+            int y = start[1] + dir[1];
+            int count = 0;
+            // 最后一个循环的时候，x y 已经走到不合法的位置了，需要退回来一个才是合法的
+            // count 因为初始化为0了所以出while的时候还是合法的。（进入每个direction先加了1， 这样count其实是1， 但是初始化为0了）
+            while(x >= 0 && x < maze.length && y >= 0 && y < maze[0].length && maze[x][y] == 0) {
+                x += dir[0];
+                y += dir[1];
+                count++;
+            }
+            if (distance[start[0]][start[1]] + count < distance[x- dir[0]][y - dir[1]]) {
+                distance[x- dir[0]][y - dir[1]] = distance[start[0]][start[1]] + count;
+                dfs(maze, new int[] {x- dir[0], y - dir[1]}, distance);
+            }
+
         }
     }
 }
