@@ -57,7 +57,7 @@ ONSITE 面到了 利口 四
 第二面：senior manager
 他自嗨了10分钟。安排电面
 第三面：电面 印度人。说话听不清。。。大多数时间都是在确认他在说啥
-leetcode 154 稍微改一下。inital array是一个sorted的array，问你shift了多少次才会变成现在的array。做法一摸一样。就是把return的值变成index而已。面完马上给onsite。
+done: leetcode 154 稍微改一下。inital array是一个sorted的array，问你shift了多少次才会变成现在的array。做法一摸一样。就是把return的值变成index而已。面完马上给onsite。
 
 onsite:
 1. 问了简历。给一个binary tree和target number。return treenode的位置。具体位置可以自己定义。比如按preorder定义，从index0开始标记每个node的位置。
