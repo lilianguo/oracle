@@ -1,4 +1,8 @@
 class TheMaze{
+    // Time complexity : O(mn). Complete traversal of maze will be done in the worst case. 
+    // Here, m and n refers to the number of rows and coloumns of the maze.
+    // Space complexity : O(mn). visited array of size m*nm∗n is used and queuequeue size can grow upto m*n
+    // in worst case.
     public boolean hasPath(int[][] maze, int[] start, int[] destination) {
         int m = maze.length;
         int n = maze[0].length;
