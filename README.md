@@ -121,4 +121,114 @@ DP done: maximal square 利口儿儿要，
 DP done: coin change II 利口五一吧。
 都是dp
 
-算法是Leetcode 1091， Shortest path in binary matrix 
+算法是Leetcode 1091， Shortest path in binary matrix \
+
+1. 三哥。第一题：Add 2 binary t‍‍‍‍‍‌‍‍‌‍‌‌‌‌‌‌2‌rees. 加完之后的新tree，node的位置完全和两个input tree 重合，比如root.val = root1.val + root2.val，如果一个位置只有一个tree有node，另一个tree为空，那么就是node，两个tree都是空的位置最后也是空。follow up要我写unit test，我说assert一下，面试官说不行，要给我hint，问我知不知道serialize and deserialize tree。第二题：一个简单的binary search
+2. lunch interview 一个半小时
+3. 三哥。一个room，一个robot，一些blocker，一个exit，robot可以走两种step，一种叫一小步move一个unit，一种叫一大步move两个unit。问走出去的最小step。bfs可以解
+4. 三哥。第一题 刷题网 斯而流，第二题 刷题网 而是
+5. bar raiser。白人大哥。问了一堆bq之后忽然开始做题（？？？）。一个叫flow free的游戏。一个2d board上有各种颜色的点，每种颜色的点有两个，要求把相同颜色的点两两相连，相连时线之间不可以交叉，如果可以满足要求return true，否则return false。自己define input，output。太特么难了吧，我想来想去觉得比airbnb那个boggle game还难。。。
+做法应该是dfs里面嵌套dfs，时间复杂度非常非常非常高，我写啊写也写不出来，面试官最后说，这个题很难，我面这个题面试里面还没有人做出来过。
+难的好想哭。。。谁会做。。。
+
+
+
+1. Hiring Manager 面, 主要聊项目，聊BQ， 聊他们做的东西
+2. 算法， 一个‍‍‍‍‍‌‍‍‌‍‌‌‌‌‌‌2‌叫Flow Free的游戏要求写程序resolve之， 这个应该属于NP hard问题， 后来DFS搞的确实不太好写，写出来以后面官挺满意
+3. LC原题 search target in sorted array + search in rotated sorted array, 多谢同胞放水
+4. 算法，这一轮来了一个principal， 头发胡子银白跟洪七公似的， 问的是string s2里面出现在string s1里unique character的数量，题目不难，不过follow up挺多，比如S1特别大/S2特别大/单机能存下/单机存不下等等。感觉真正的高手就是能从一个看起来特别简单的题里面问出很多门道啊，问的我一身冷汗。。
+5. 系统设计轮，设计K-V store，用户分布在全球，要求尽量低的latency
+
+
+第一轮 算法 输入一个整数组，和一个整数K 求数组包裹多少个子数组 子数组的和可以被K 乘除  例如 输入 [1,2,3] ‍‍‍‍‍‌‍‍‌‍‌‌‌‌‌‌2‌,K = 3 返回值是3；显示让写 o(n3) （找出所有子数组求和） 的然后是O(n2)的(用一个sum array) 来做 最后是o（n)的 类似于2 sum 同余定理写的
+第二轮 中午吃饭
+第三轮 设计 键值对存储 
+第四轮 李口德散十伞 要求 二分查找。 注意没变化的情况。 LZ 很笨写出了bug 不过后来自己 修复了
+第五轮 李口德艺耳陆 词梯2 原题 bfs + dfs 解决
+
+
+
+5.2 onsite（75 min）：
+简历+图的问题
+1. 给一副有向图 问从a到b能不能到 返回true or false
+move up 输出所以两‍‍‍‍‍‌‍‍‌‍‌‌‌‌‌‌2‌个点能到的路径
+
+5.9 加面（60min）：
+1. 判断链表有没有环
+move up：如何优化空间到 O(1) 快慢指针
+
+2. 利口 LRU
+
+
+一轮 sys design加半个coding 什么系统能达到三个四个九 和波浪排序‍‍‍‍‍‌‍‍‌‍‌‌‌‌‌‌2‌？
+这是两道题 第一是说一个做一个服务 你是中间那个 为上一次提供服务要求是0.9999u‍‍‍‍‍‌‍‍‌‍‌‌‌‌‌‌2‌p 你需要call另一个系统给你东西 那个系统只能提供到0.999 问你在这个情况下你这个服务怎么做才能满足上面调用你的系统的那个9999的要求。 第二个题就是上面一个数比自己大 下面一个数比自己小 一个无序数组 写个程序转成可以满足要求的那个形式
+
+二轮 和领导吃饭 一个半小时。。 这午饭我都想不吃了。 就是各种问你metrics logs 
+三轮 刷题网 跳跳游戏2 自己搜 常见题
+四轮 不知道是不是刷题网原题。 就是那个一个连标的单词 哪种字母出现一样次数的单词 最多 用个什么哈希图写写就好，写快了会延展的问些小问题
+五轮 两个人过来bq 问问你各种项目经验 目前面试有什么不满的。。
+
+Onsite:(75min)
+1. Reverse LinkedList
+2. 在一个sorted array中找到没有sorted的区间。
+3. longest‍‍‍‍‍‌‍‍‌‍‌‌‌‌‌‌2‌ substring containing no more than k characters.
+面试的全都是印度小哥，聊了聊说想找CS基础比较扎实，并且熟练掌握至少一门编程语言的学生。
+算法题都不难，所以过程一直在聊天，问问题，聊天，问问题，问问题.... = =
+
+
+
+第一轮：
+纯code
+
+https://stackoverflow.com/questions/19355646/‍‍‍‍‍‌‍‍‌‍‌‌‌‌‌‌2‌max-distance-of-a-number-greater-than-a-given-number-in-array
+
+https://stackoverflow.com/questions/9493853/given-an-array-find-out-the-next-smaller-element-for-each-element
+这两道题是有难度的，之前没有遇到过，用力想了一会。之前一直以为oracle的题不难。感觉oracle组和组之间的面试难度还是有差异的
+
+第二轮：
+
+印度manager面，bq + 介绍组 + system design + java 多线程 + algorithm design
+
+据了解，oracle会面一些java有关的知识，比如说多线程，单例模式，garbage collection等等，要做好准备
+
+
+
+mobile app 如何显示上万个data point。如果所有数据都传输给mobile，很消耗流量。如何设计可以又准确，又快速。一道开放式题目
+
+
+第一轮：问了tree的bfs, dfs, 然后问了一些课程的内容，问了你会什么design‍‍‍‍‍‌‍‍‌‍‌‌‌‌‌‌2‌ pattern, 然后让我给我会的各个编程语言打分，问我10年后的工作规划，感觉没有问什么实质性的内容2333
+第二轮：先问了简历上的实习经历，然后做了一道coding，类似LRU。又问了你会什么design pattern。之后就是闲聊...
+感觉他家就是即使是同一个manager，不同的人面的题目也是完全不一样，全看manager心情了，运气很重要
+
+
+1.‍‍‍‍‍‌‍‍‌‍‌‌‌‌‌‌2‌ 给一个元素周期表和一个str，问str能否由周期表里面的某些元素组成
+2. 利口 衣衣期
+3. 吃饭聊天
+4. top k
+5. basics on test, CICD, log, metrics, canary... 利口 思思尔
+
+
+
+西雅图的O‍‍‍‍‍‌‍‍‌‍‌‌‌‌‌‌2‌CI里一个team，是做O家cloud formation的五轮：
+round1:白人小哥哥，人比较nice，互相介绍完以后coding，利口散就死，写完他拍了照片又扯了一些有的没的。
+round2:看着是华人，但是名字不像华人，应该是东南亚那边的。算法是利口而舅舅，利口巴斯散，写完拍照片结束，
+round3:lunch+hire manager面试， 问了非常多的BQ，感觉这个HM很care我目前工作习惯已经当前老板跟同事对我的评价， 然后让写了个LRU cache
+round4:三姐，给一些string，比如"A<B<C", "C<D<E",然后判断这些不等式是否valid，感觉就是判断图是否有环，跟利口而灵气差不多，就说了思路，然后写了代码，然后三姐说可以，然后拍照走了。
+round5:一个年纪很大的白人大叔，他自我介绍是team的architect。感觉资历很老，问了很多aws的services的问题，然后又问对目前OCI的产品有了解没，这一轮说得不好，毕竟很多service只是用过，不知道具体的架构。
+
+
+lamba, cloudformatio, ec2, dynamo db
+
+
+一共五轮，早‍‍‍‍‍‌‍‍‌‍‌‌‌‌‌‌2‌上一轮，午饭一轮，下午三轮
+第一轮：印度小哥 寒暄两句以后 问知道linux的grep不 答说知道 可以用类似bfs查找 然后问要是让你设计一个类似的function 你要怎么ood？感觉我答得不是特别详细 但小哥也没追问了。然后就是一道类似利口而灵气的题。最后问问题
+第二轮：和印度hiring mananager吃饭 就是正常聊天 中间穿插了一些看得出来是他准备的bq。比较有趣的细节是在我提出我还有别家offer以后 hm问我我学校的接offer policy是啥 我马上义正言辞地说“接了就是接了！绝对不能撕！“。。
+第三轮：白人大叔 先问了很多简历 然后就是graph找cycle（有向和无向。。）心想woc 这和ms面的一摸一样 活生生跪出来的经验。。。只能秒了 然后是一道开始听到题目描述以为我要跪了的题 结果发现很简单 大概就是一个餐厅有十张桌子 提供reservation function take一个time和一个人数 返回boolean能不能预定成功（成功的同时也就预订了）时间是15分钟的间隔 桌子是一张坐四人 两张拼一起坐六人 三张八人这样 然后一群人来如果大于四人不能分开坐 只能拼桌 最后就是一张桌子只要reserve了就会被reserve固定的45分钟。用个map就能解决。最后问问题
+第四轮：白人大哥 开始感觉很高冷 但面着面着感觉人还挺好 结合我project问了很多distributed system的问题还有涉及到load balancer 全程更像是互相讨论找solution 然后就问问题。。。问了一会儿感觉都要聊天了。。大哥说我们再来一道tinyurl吧。。。基本算法基础上讨论了小balance load的问题 然后又接着问问题。。我问你这些distributed system和load balancer的知识是哪些途径学的 他说他原来是在亚麻做app的 刚来的时候啥都不知道 来了以后才学的。。。大哥。。那你考我这么多。。。不过人挺好 最给我提了个醒下一轮是bartender 可以一票否决 多半是要来算法。。我就给他说我有朋友bartender的算法题居然巨简单 他表示难以置信 我说真的看缘分
+第五轮：印度大叔bartender 然后我就发现我之前想多了。。。这轮全程bq。。。。。。没啥说的 就是bq 互相问问题
+
+
+https://www.zhihu.com/question/36734157
+
+
+https://zhuanlan.zhihu.com/p/80912060
