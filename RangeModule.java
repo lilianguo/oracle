@@ -16,6 +16,14 @@ class RangeModule {
     public RangeModule() {
         ranges = new TreeSet<>();
     }
+    // 利用treeset是可以自定义排序，implement Comparable 
+    // 排成 按right升序，如果right 相同，则按left升序
+    /*
+    如此： addRange(left, right)需要找到比（0，left - 1）>= 的interval 们
+    removeRange(left, right) 需要找到 (0, left) > 的interval 们
+    query则只需要比较set中的一个interval，它是第一个右边界比 left 大的interval， 如果这个interval不存在，或者
+    input不是它的子集， 那说明不包含整个input
+    */
 
     class Interval implements Comparable<Interval>{
         int left;
