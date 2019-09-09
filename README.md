@@ -10,17 +10,17 @@ The Maze: 做到 the maze III, 但是前两问不熟
 第三轮：三道常见算法题，没什么好说的，就是有点累：刷题网 酒吧，衣伞巴，伞似漆。
 第四轮：问了问behavior, 然后是刷题网 似衣漆, 用的BFS。
 
-done:98
-done:138
-
-done:347
-done:147
-
-417
-
-LC 126. Word Ladder II, BFS imp, then discuss how to bu‍‍‍‍‍‌‍‍‌‍‌‌‌‌‌‌2‌ild the graph,
-LC 45. Jump Game II
+done:98 validate binary search tree
+done:138 Copy List with Random Pointer  
 done LC 56. Merge Intervals
+done:347 	Top K Frequent Elements 
+done:147   Insertion Sort List  
+done: 这题 属于DFS加BFS, 每次限制深度做dfs, 同时在dfs里需要剪枝 LC 126. Word Ladder II, BFS imp, then discuss how to bu‍‍‍‍‍‌‍‍‌‍‌‌‌‌‌‌2‌ild the graph,
+417   Pacific Atlantic Water Flow    
+正在做 LC 45. Jump Game II
+
+
+
 
 Design Email service and client. 
 You drive the conversation and discuss features like how to send ad emails to millions of users. write an email at app and then loss internet connetion. attachment. browse emails with page. edit email in multiple clients and delta update
