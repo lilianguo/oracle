@@ -15,9 +15,13 @@ done:138 Copy List with Random Pointer
 done LC 56. Merge Intervals
 done:347 	Top K Frequent Elements 
 done:147   Insertion Sort List  
-done: 这题 属于DFS加BFS, 每次限制深度做dfs, 同时在dfs里需要剪枝 LC 126. Word Ladder II, BFS imp, then discuss how to bu‍‍‍‍‍‌‍‍‌‍‌‌‌‌‌‌2‌ild the graph,
-417   Pacific Atlantic Water Flow    
-正在做 LC 45. Jump Game II
+done: 这题 属于DFS加BFS, 每次限制深度做dfs, 同时在dfs里需要剪枝 LC 126. Word Ladder II, BFS imp, then discuss how to 
+417   Pacific Atlantic Water Flow 
+bu‍‍‍‍‍‌‍‍‌‍‌‌‌‌‌‌2‌ild the graph,
+417   Pacific Atlantic Water Flow   
+Done: BFS 算法是Leetcode 1091， Shortest path in binary matrix 
+正在做 LC 45. Jump Game II DP, backtracking
+
 
 
 
@@ -36,7 +40,7 @@ Many of them are from Amazon, so they also have the leadership questions like ho
 
 1. 给出一个<电影明星，电影作品>的字典和任意两个明星，找出他们之间的关系路径。例：约翰有作品1,2,3，汤姆有作品3,4, 山姆有作品4,5。求汤姆和山姆的路径，是约翰->3-‍‍‍‍‍‌‍‍‌‍‌‌‌‌‌‌2‌>汤姆->4->山姆.
 
-2. 给出两个链表节点和一个链表，调换这两个节点。
+2. 给出两个链表节点和一个链表，调换这两个节点。24. swap nodes in pairs
 
 $. 午饭轮，聊聊工作问题。
 
@@ -99,7 +103,7 @@ MOVE ON了！
 Onsite：
      OCI很注重Culture fit，所以onsite之前，一定要把Recruiter发的OCI的Value好好看看，然后结合下自己的工作经历。
      第一轮：
-Doing             BQ + 算法。算法是Leetcode 1091， 我其实并没有做得很好，我觉得最重要是交流，并不会要求Code无bug啥的。
+Done     BQ + 算法。算法是Leetcode 1091， Shortest Path in Binary Matrix  ，我觉得最重要是交流，并不会要求Code无bug啥的。
      第二轮：
              BQ + 算法。算法是binary tree 的in-order traversal。follow up是实现morris的写完，在交流的情况下写完了。
      第三轮：
@@ -121,7 +125,6 @@ DP done: maximal square 利口儿儿要，
 DP done: coin change II 利口五一吧。
 都是dp
 
-算法是Leetcode 1091， Shortest path in binary matrix \
 
 1. 三哥。第一题：Add 2 binary t‍‍‍‍‍‌‍‍‌‍‌‌‌‌‌‌2‌rees. 加完之后的新tree，node的位置完全和两个input tree 重合，比如root.val = root1.val + root2.val，如果一个位置只有一个tree有node，另一个tree为空，那么就是node，两个tree都是空的位置最后也是空。follow up要我写unit test，我说assert一下，面试官说不行，要给我hint，问我知不知道serialize and deserialize tree。第二题：一个简单的binary search
 2. lunch interview 一个半小时
@@ -232,3 +235,11 @@ https://www.zhihu.com/question/36734157
 
 
 https://zhuanlan.zhihu.com/p/80912060
+
+
+
+第一轮：给一个二维数组，以及二维数组内的一片区域，让你把这片区域拷贝到另一个区域上去。一开始我说直接拷贝的方法，加一个缓存，防止overlap的情况，follow up的问题是如果不用e‍‍‍‍‍‌‍‍‌‍‌‌‌‌‌‌2‌xtra space,如何做。我的解决办法是判断目标区域的位置，决定拷贝的顺序
+第二轮，基本就是BQ，各种项目问题，给了一个SQL的题，以及一个machine learning和bussiness decision的问题，这一轮感觉最懵逼
+第三轮， 跟老大吃饭聊天，老大是东欧的某个国家，记不清楚是哪个，反正巨喜欢足球，网球。说中国队的球踢的太烂他们业余队都能对付男足 哎。这一轮的题目是两个linked list代表的numbers,做加法，实在是不能再简单了。
+第四轮， 国人老哥过来面，问了一道LeetCode medium的原题，用2pointers就很容易解，然后问了下后台backend如果说某个用户抱怨说request请求时长大幅增长10倍，可能是啥情况。最后问了下LRU的实现原理。这一轮也直接秒掉
+第五轮， 硬度三哥，一上来自我介绍，说是从aws过来的，多么多么的牛逼，然后就问了两个bq的问题，比方说很多任务要做，如何安排自己的priority。 算法题是，让你实现一个BST🌲的插入，删除操作。这一题，删除的操作代码，最后每写完，主要是前面架构没想好，没用递归解，到最后思路出来后，没时间写了，白板写code，不好更改，写起来也慢。后来跟面试官说了下recursion的实现方法，以及大致写了一下开头的代码
