@@ -120,7 +120,7 @@ Done     BQ + 算法。算法是Leetcode 1091， Shortest Path in Binary Matr
 第二题：有一大块内存空间（可理解为一个巨大的array），要写ge‍‍‍‍‍‌‍‍‌‍‌‌‌‌‌‌2‌t(index)和set(index, val)。问题在于如何区分内存空间里原来存储的garbage和新放进去的有用信息。只允许用array，不能用hash table, set...
 比如说内存里的某个位置，即使你没有往里面写过有用信息，你也不知道里面是什么（你不能假定里面是０）。那么如果你看到某个位置‍‍‍‍‍‌‍‍‌‍‌‌‌‌‌‌2‌的内容是－１，你怎么知道是之前写入的有用信息－１呢，还是本来就是－１（garbage)
 
-DP done: maximal square 利口儿儿要，
+DP 第二遍 done: maximal square 利口儿儿要，
 
 DP done: coin change II 利口五一吧。
 都是dp
