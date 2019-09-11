@@ -20,7 +20,7 @@ Done: BFS 算法是Leetcode 1091， Shortest path in binary matrix
 Done: 24. swap nodes in pairs
 ONSITE 面到了 利口 四 
 done: leetcode 154 稍微改一下。inital array是一个sorted的array，问你shift了多少次才会变成现在的array。做法一摸一样。就是把return的值变成index而已。面完马上给onsite。
-
+done: 207: course schedule 图 topologic sort
 
 
 
