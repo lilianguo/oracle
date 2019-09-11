@@ -12,7 +12,13 @@ class NumberOfIslandsII {
     // add path compression in find, updating the father for each node for faster find next time
     // deleted the print 
     // time ok this time
-    
+    /*
+    Time complexity : O(m×n+L) where LL is the number of operations, m is the number of rows and n is the number of columns. 
+    it takes O(m×n) to initialize UnionFind, and O(L) to process positions. 
+    Note that Union operation takes essentially constant time[1] when UnionFind is implemented with both path compression and union by rank.
+
+    Space complexity : O(m×n) as required by UnionFind data structure.
+    */
     private int[] father = null;
     private int find(int x) {
         if (father[x] == x) {
