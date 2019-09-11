@@ -7,8 +7,6 @@ The Maze: 做到 the maze III, 但是前两问不熟
 
 中午陪经理吃饭，一个半小时，聊得还算愉快
 第二轮：问了一些项目里的问题，接下来问我一个full stack的系统如何Debug，讨论了很多细节。。。然后又让我设计一个点歌系统，顾客可以花钱在一个屏幕上点歌。之中问到了哪些歌应该放在前面，我说可以用LRU cache, 于是又让我讲了讲实现，感觉自己讲得不是很清楚。
-第三轮：三道常见算法题，没什么好说的，就是有点累：刷题网 酒吧，衣伞巴，伞似漆。
-第四轮：问了问behavior, 然后是刷题网 似衣漆, 用的BFS。
 
 done:98 validate binary search tree
 done:138 Copy List with Random Pointer  
@@ -19,7 +17,9 @@ done: 这题 属于DFS加BFS, 每次限制深度做dfs, 同时在dfs里需要剪
 done: 417   Pacific Atlantic Water Flow   
 Done: BFS 算法是Leetcode 1091， Shortest path in binary matrix 
 正在做 LC 45. Jump Game II DP, backtracking
-
+Done: 24. swap nodes in pairs
+ONSITE 面到了 利口 四 
+done: leetcode 154 稍微改一下。inital array是一个sorted的array，问你shift了多少次才会变成现在的array。做法一摸一样。就是把return的值变成index而已。面完马上给onsite。
 
 
 
@@ -66,7 +66,7 @@ ONSITE 面到了 利口 四
 第二面：senior manager
 他自嗨了10分钟。安排电面
 第三面：电面 印度人。说话听不清。。。大多数时间都是在确认他在说啥
-done: leetcode 154 稍微改一下。inital array是一个sorted的array，问你shift了多少次才会变成现在的array。做法一摸一样。就是把return的值变成index而已。面完马上给onsite。
+
 
 onsite:
 1. 问了简历。给一个binary tree和target number。return treenode的位置。具体位置可以自己定义。比如按preorder定义，从index0开始标记每个node的位置。
