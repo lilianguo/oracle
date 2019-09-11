@@ -16,9 +16,7 @@ done LC 56. Merge Intervals
 done:347 	Top K Frequent Elements 
 done:147   Insertion Sort List  
 done: 这题 属于DFS加BFS, 每次限制深度做dfs, 同时在dfs里需要剪枝 LC 126. Word Ladder II, BFS imp, then discuss how to 
-417   Pacific Atlantic Water Flow 
-bu‍‍‍‍‍‌‍‍‌‍‌‌‌‌‌‌2‌ild the graph,
-417   Pacific Atlantic Water Flow   
+done: 417   Pacific Atlantic Water Flow   
 Done: BFS 算法是Leetcode 1091， Shortest path in binary matrix 
 正在做 LC 45. Jump Game II DP, backtracking
 
