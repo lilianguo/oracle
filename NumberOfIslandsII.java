@@ -9,14 +9,26 @@ class NumberOfIslandsII {
     You may assume all four edges of the grid are all surrounded by water.
     */
     
-    // time limit exceed
-
+    // add path compression in find, updating the father for each node for faster find next time
+    // deleted the print 
+    // time ok this time
+    
     private int[] father = null;
     private int find(int x) {
         if (father[x] == x) {
             return x;
         }
-        return find(father[x]);
+        int ancestor = father[x];
+        while(ancestor != father[ancestor]) {
+            ancestor = father[ancestor];
+        }
+        int fa = x;
+        while (fa != father[fa]) {
+            int tmp = father[fa];
+            father[fa] = ancestor;
+            fa = tmp;
+        }
+        return ancestor;
     }
     private void union(int x, int y) {
         int rootA = find(x);
@@ -35,10 +47,8 @@ class NumberOfIslandsII {
         }
 
         father = new int[m * n];
-        System.out.println("father length is " + m*n);
         for (int i = 0; i < m; i++) {
             for (int j = 0; j < n; j++) {
-                //System.out.println("i*n + j is " + (i*n + j));
                 father[i*n + j] = i*n + j;
             }
         }
@@ -54,13 +64,8 @@ class NumberOfIslandsII {
             isIsland[x][y] = 1;
             size++;
             for (int dir = 0; dir < 4; dir++) {
-                System.out.println("dx.size " + dx.length);
-                System.out.println("x = " + x);
-                System.out.println("y = " + y);
                 int nx = x + dx[dir];
                 int ny = y + dy[dir];
-                System.out.println("nx = " + nx);
-                System.out.println("ny = " + ny);
                 if (nx >= 0 && ny >= 0 && nx < m && ny < n && isIsland[nx][ny] == 1) {
                     union(x * n + y, nx * n + ny);
                 }
@@ -69,4 +74,5 @@ class NumberOfIslandsII {
         }
         return res;
     }
+    
 }
