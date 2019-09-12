@@ -21,7 +21,8 @@ Done: 24. swap nodes in pairs
 ONSITE 面到了 利口 四 
 done: leetcode 154 稍微改一下。inital array是一个sorted的array，问你shift了多少次才会变成现在的array。做法一摸一样。就是把return的值变成index而已。面完马上给onsite。
 done: 207: course schedule 图 topologic sort
-
+done:  Reverse LinkedList
+581. Shortest Unsorted Continuous Subarray 在一个sorted array中找到没有sorted的区间。 
 
 
 Design Email service and client. 
@@ -170,7 +171,6 @@ move up：如何优化空间到 O(1) 快慢指针
 五轮 两个人过来bq 问问你各种项目经验 目前面试有什么不满的。。
 
 Onsite:(75min)
-1. Reverse LinkedList
 2. 在一个sorted array中找到没有sorted的区间。
 3. longest‍‍‍‍‍‌‍‍‌‍‌‌‌‌‌‌2‌ substring containing no more than k characters.
 面试的全都是印度小哥，聊了聊说想找CS基础比较扎实，并且熟练掌握至少一门编程语言的学生。
