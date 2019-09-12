@@ -23,8 +23,13 @@ done: leetcode 154 稍微改一下。inital array是一个sorted的array，问�
 done: 207: course schedule 图 topologic sort
 done:  Reverse LinkedList
 581. Shortest Unsorted Continuous Subarray 在一个sorted array中找到没有sorted的区间。 
-binary tree 的in-order traversal。follow up是实现morris的写完，在交流的情况下写完了。
-
+Tree: 
+done: binary tree 的in-order traversal。follow up是实现morris的写完，在交流的情况下写完了。
+        https://leetcode.com/problems/binary-tree-inorder-traversal/solution/ morris 不会
+BST insert and delete: 
+done: 450. Delete Node in a BST 
+done: 701. Insert into a Binary Search Tree
+4. Median of Two Sorted Arrays 
 
 Design Email service and client. 
 You drive the conversation and discuss features like how to send ad emails to millions of users. write an email at app and then loss internet connetion. attachment. browse emails with page. edit email in multiple clients and delta update
@@ -40,10 +45,6 @@ Many of them are from Amazon, so they also have the leadership questions like ho
 
 1. 给出一个<电影明星，电影作品>的字典和任意两个明星，找出他们之间的关系路径。例：约翰有作品1,2,3，汤姆有作品3,4, 山姆有作品4,5。求汤姆和山姆的路径，是约翰->3-‍‍‍‍‍‌‍‍‌‍‌‌‌‌‌‌2‌>汤姆->4->山姆.
 
-2. 给出两个链表节点和一个链表，调换这两个节点。24. swap nodes in pairs
-
-$. 午饭轮，聊聊工作问题。
-
 3. 基本计算器。只有乘和加。再聊聊工作问题。
 
 4. 抬杠者 (意译)，聊聊工作问题。一个小系统设计，两个异地的数据中心，同时是读写库，怎么去同步数据。
@@ -54,10 +55,8 @@ $. 午饭轮，聊聊工作问题。
 2. 问到了 储存 密码，用STRING好 还是用 CHAR [] 好，并说出理由（网上有答案）
 3. 脑经急转弯， 有三个人在一个屋子里，每一个人知道自己的工资，但不知道别人的工资，怎么样才能知道三人的平均工资？ 每一个人都不能直接问别人工资是多少
 4. 窨井盖为什么是圆的
-觉得甲骨文的题好有趣，也不容易准备， 然后我就挂了
 
 再发一个我朋友的，电面面到了 2PC
-ONSITE 面到了 利口 四
 然后 问你 一个DB TABLE 里面有一个 COLUMN 存了性别，问你在这个 COLUMN上加 INDEX 有用吗
 
 onsite:
@@ -222,4 +221,4 @@ https://zhuanlan.zhihu.com/p/80912060
 第二轮，基本就是BQ，各种项目问题，给了一个SQL的题，以及一个machine learning和bussiness decision的问题，这一轮感觉最懵逼
 第三轮， 跟老大吃饭聊天，老大是东欧的某个国家，记不清楚是哪个，反正巨喜欢足球，网球。说中国队的球踢的太烂他们业余队都能对付男足 哎。这一轮的题目是两个linked list代表的numbers,做加法，实在是不能再简单了。
 第四轮， 国人老哥过来面，问了一道LeetCode medium的原题，用2pointers就很容易解，然后问了下后台backend如果说某个用户抱怨说request请求时长大幅增长10倍，可能是啥情况。最后问了下LRU的实现原理。这一轮也直接秒掉
-第五轮， 硬度三哥，一上来自我介绍，说是从aws过来的，多么多么的牛逼，然后就问了两个bq的问题，比方说很多任务要做，如何安排自己的priority。 算法题是，让你实现一个BST🌲的插入，删除操作。这一题，删除的操作代码，最后每写完，主要是前面架构没想好，没用递归解，到最后思路出来后，没时间写了，白板写code，不好更改，写起来也慢。后来跟面试官说了下recursion的实现方法，以及大致写了一下开头的代码
+第五轮， 硬度三哥，一上来自我介绍，说是从aws过来的，多么多么的牛逼，然后就问了两个bq的问题，比方说很多任务要做，如何安排自己的priority。
