@@ -23,6 +23,7 @@ done: leetcode 154 稍微改一下。inital array是一个sorted的array，问�
 done: 207: course schedule 图 topologic sort
 done:  Reverse LinkedList
 581. Shortest Unsorted Continuous Subarray 在一个sorted array中找到没有sorted的区间。 
+binary tree 的in-order traversal。follow up是实现morris的写完，在交流的情况下写完了。
 
 
 Design Email service and client. 
@@ -59,16 +60,6 @@ $. 午饭轮，聊聊工作问题。
 ONSITE 面到了 利口 四
 然后 问你 一个DB TABLE 里面有一个 COLUMN 存了性别，问你在这个 COLUMN上加 INDEX 有用吗
 
-
-自己海投第二天收到的recruiter邮件。面的是OCI在Seattle Downtown。
-
-第一面： recruiter
-自我介绍和经历以及确定组
-第二面：senior manager
-他自嗨了10分钟。安排电面
-第三面：电面 印度人。说话听不清。。。大多数时间都是在确认他在说啥
-
-
 onsite:
 1. 问了简历。给一个binary tree和target number。return treenode的位置。具体位置可以自己定义。比如按preorder定义，从index0开始标记每个node的位置。
 
@@ -83,13 +74,6 @@ onsite:
 
 5. 两个bar raiser轮番轰炸。1. 收到过哪些negative的feedback。2. 说一下自己miss deadline的事情。3. 和同事有conflict的时候怎么办。还有一些一下子想不起来了。
 
-来onsite之前，就看到一些消息说只要2年工作经验以上的SDE。当然就在想为什么我能拿到onsite。中午和senior manager面试的时候感觉他不怎么热情，不怎么想聊天。问了他一句你们接下来的招人计划，回我说要招senior。可以说很不给我面子。很尴尬了。
-
-
-总体的面试感觉是，算法题都不难。senior manager给我一种不怎么想面我的感觉。这个体验非常差。
-MOVE ON了！
-
-
 
 补充内容 (2019-7-27 14:26):
 第二点说的话不通，有很多语病。。我想说的是，和senior manager吃饭聊天。senior manager说要招senior sde。但是我只有一年经验。我很诧异怎么就给我安排了面试。
@@ -101,8 +85,6 @@ MOVE ON了！
 
 Onsite：
      OCI很注重Culture fit，所以onsite之前，一定要把Recruiter发的OCI的Value好好看看，然后结合下自己的工作经历。
-     第一轮：
-Done     BQ + 算法。算法是Leetcode 1091， Shortest Path in Binary Matrix  ，我觉得最重要是交流，并不会要求Code无bug啥的。
      第二轮：
              BQ + 算法。算法是binary tree 的in-order traversal。follow up是实现morris的写完，在交流的情况下写完了。
      第三轮：
