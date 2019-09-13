@@ -8,28 +8,53 @@ The Maze: 做到 the maze III, 但是前两问不熟
 中午陪经理吃饭，一个半小时，聊得还算愉快
 第二轮：问了一些项目里的问题，接下来问我一个full stack的系统如何Debug，讨论了很多细节。。。然后又让我设计一个点歌系统，顾客可以花钱在一个屏幕上点歌。之中问到了哪些歌应该放在前面，我说可以用LRU cache, 于是又让我讲了讲实现，感觉自己讲得不是很清楚。
 
-done:98 validate binary search tree
-done:138 Copy List with Random Pointer  
 done LC 56. Merge Intervals
 done:347 	Top K Frequent Elements 
-done:147   Insertion Sort List  
+
 done: 这题 属于DFS加BFS, 每次限制深度做dfs, 同时在dfs里需要剪枝 LC 126. Word Ladder II, BFS imp, then discuss how to 
 done: 417   Pacific Atlantic Water Flow   
 Done: BFS 算法是Leetcode 1091， Shortest path in binary matrix 
-正在做 LC 45. Jump Game II DP, backtracking
 Done: 24. swap nodes in pairs
 ONSITE 面到了 利口 四 
-done: leetcode 154 稍微改一下。inital array是一个sorted的array，问你shift了多少次才会变成现在的array。做法一摸一样。就是把return的值变成index而已。面完马上给onsite。
-done: 207: course schedule 图 topologic sort
-done:  Reverse LinkedList
 581. Shortest Unsorted Continuous Subarray 在一个sorted array中找到没有sorted的区间。 
+117
+
+String:
+
+
+sort:
+和波浪排序‍‍‍‍‍‌‍‍‌‍‌‌‌‌‌‌2‌？
+
 Tree: 
+done:98 validate binary search tree
 done: binary tree 的in-order traversal。follow up是实现morris的写完，在交流的情况下写完了。
         https://leetcode.com/problems/binary-tree-inorder-traversal/solution/ morris 不会
 BST insert and delete: 
 done: 450. Delete Node in a BST 
 done: 701. Insert into a Binary Search Tree
+
+Binary Search 
 4. Median of Two Sorted Arrays 
+done: 154 稍微改一下。inital array是一个sorted的array，问你shift了多少次才会变成现在的array。做法一摸一样。就是把return的值变成index而已。
+
+
+List
+done:138 Copy List with Random Pointer 
+done:147   Insertion Sort List  
+
+LinkedList:
+done:  Reverse LinkedList
+
+graph:
+done: 207: course schedule 图 topologic sort
+1. 给一副有向图 问从a到b能不能到 返回true or false
+follow up 输出所以两‍‍‍‍‍‌‍‍‌‍‌‌‌‌‌‌2‌个点能到的路径
+
+
+DP:
+第二遍 done: 221 maximal square 
+done: 518 coin change II 
+正在做 LC 45. Jump Game II DP, backtracking
 
 Design Email service and client. 
 You drive the conversation and discuss features like how to send ad emails to millions of users. write an email at app and then loss internet connetion. attachment. browse emails with page. edit email in multiple clients and delta update
@@ -100,11 +125,6 @@ Onsite：
 第二题：有一大块内存空间（可理解为一个巨大的array），要写ge‍‍‍‍‍‌‍‍‌‍‌‌‌‌‌‌2‌t(index)和set(index, val)。问题在于如何区分内存空间里原来存储的garbage和新放进去的有用信息。只允许用array，不能用hash table, set...
 比如说内存里的某个位置，即使你没有往里面写过有用信息，你也不知道里面是什么（你不能假定里面是０）。那么如果你看到某个位置‍‍‍‍‍‌‍‍‌‍‌‌‌‌‌‌2‌的内容是－１，你怎么知道是之前写入的有用信息－１呢，还是本来就是－１（garbage)
 
-DP 第二遍 done: maximal square 利口儿儿要，
-
-DP done: coin change II 利口五一吧。
-都是dp
-
 
 1. 三哥。第一题：Add 2 binary t‍‍‍‍‍‌‍‍‌‍‌‌‌‌‌‌2‌rees. 加完之后的新tree，node的位置完全和两个input tree 重合，比如root.val = root1.val + root2.val，如果一个位置只有一个tree有node，另一个tree为空，那么就是node，两个tree都是空的位置最后也是空。follow up要我写unit test，我说assert一下，面试官说不行，要给我hint，问我知不知道serialize and deserialize tree。第二题：一个简单的binary search
 2. lunch interview 一个半小时
@@ -131,11 +151,6 @@ DP done: coin change II 利口五一吧。
 
 
 
-5.2 onsite（75 min）：
-简历+图的问题
-1. 给一副有向图 问从a到b能不能到 返回true or false
-move up 输出所以两‍‍‍‍‍‌‍‍‌‍‌‌‌‌‌‌2‌个点能到的路径
-
 5.9 加面（60min）：
 1. 判断链表有没有环
 move up：如何优化空间到 O(1) 快慢指针
@@ -143,19 +158,13 @@ move up：如何优化空间到 O(1) 快慢指针
 2. 利口 LRU
 
 
-一轮 sys design加半个coding 什么系统能达到三个四个九 和波浪排序‍‍‍‍‍‌‍‍‌‍‌‌‌‌‌‌2‌？
+一轮 sys design加半个coding 什么系统能达到三个四个九 
 这是两道题 第一是说一个做一个服务 你是中间那个 为上一次提供服务要求是0.9999u‍‍‍‍‍‌‍‍‌‍‌‌‌‌‌‌2‌p 你需要call另一个系统给你东西 那个系统只能提供到0.999 问你在这个情况下你这个服务怎么做才能满足上面调用你的系统的那个9999的要求。 第二个题就是上面一个数比自己大 下面一个数比自己小 一个无序数组 写个程序转成可以满足要求的那个形式
 
 二轮 和领导吃饭 一个半小时。。 这午饭我都想不吃了。 就是各种问你metrics logs 
-三轮 刷题网 跳跳游戏2 自己搜 常见题
 四轮 不知道是不是刷题网原题。 就是那个一个连标的单词 哪种字母出现一样次数的单词 最多 用个什么哈希图写写就好，写快了会延展的问些小问题
 五轮 两个人过来bq 问问你各种项目经验 目前面试有什么不满的。。
 
-Onsite:(75min)
-2. 在一个sorted array中找到没有sorted的区间。
-3. longest‍‍‍‍‍‌‍‍‌‍‌‌‌‌‌‌2‌ substring containing no more than k characters.
-面试的全都是印度小哥，聊了聊说想找CS基础比较扎实，并且熟练掌握至少一门编程语言的学生。
-算法题都不难，所以过程一直在聊天，问问题，聊天，问问题，问问题.... = =
 
 
 
@@ -180,11 +189,8 @@ mobile app 如何显示上万个data point。如果所有数据都传输给mobil
 
 第一轮：问了tree的bfs, dfs, 然后问了一些课程的内容，问了你会什么design‍‍‍‍‍‌‍‍‌‍‌‌‌‌‌‌2‌ pattern, 然后让我给我会的各个编程语言打分，问我10年后的工作规划，感觉没有问什么实质性的内容2333
 第二轮：先问了简历上的实习经历，然后做了一道coding，类似LRU。又问了你会什么design pattern。之后就是闲聊...
-感觉他家就是即使是同一个manager，不同的人面的题目也是完全不一样，全看manager心情了，运气很重要
-
 
 1.‍‍‍‍‍‌‍‍‌‍‌‌‌‌‌‌2‌ 给一个元素周期表和一个str，问str能否由周期表里面的某些元素组成
-2. 利口 衣衣期
 3. 吃饭聊天
 4. top k
 5. basics on test, CICD, log, metrics, canary... 利口 思思尔
