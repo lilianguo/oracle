@@ -1,4 +1,84 @@
+https://www.1point3acres.com/bbs/forum.php?mod=forumdisplay&fid=145&filter=sortid&sortid=311&orderby=dateline 
+
+这个是compute 好好看
+第一轮：问我分布式文件存储系统，一个很大的文件的存取流程是什么。我对这方面不太了解，扯了一点皮毛之后扯不下去了，直接跟面试官说我不太懂呀。面试官说好吧那我来考你别的吧，于是问了我一道算法题：在棋盘上‍‍‍‍‍‌‍‍‌‍‌‌‌‌‌‌‍‌给一个起点一个终点，判断国际象棋里面的Knight（类似中国象棋里的马）是否能够从起点移到终点。我用的BFS, 但是貌似有更简单的方法。
+中午陪经理吃饭，一个半小时，聊得还算愉快
+第二轮：问了一些项目里的问题，接下来问我一个full stack的系统如何Debug，讨论了很多细节。。。然后又让我设计一个点歌系统，顾客可以花钱在一个屏幕上点歌。之中问到了哪些歌应该放在前面，我说可以用LRU cache, 于是又让我讲了讲实现，感觉自己讲得不是很清楚。
+第三轮：三道常见算法题，没什么好说的，就是有点累：刷题网 酒吧，衣伞巴，伞似漆。
+第四轮：问了问behavior, 然后是刷题网 似衣漆, 用的BFS。
+
+今天上午才面的，感觉非常注重bq,各种问题问下来大概有10几道，有点招架不住，算法反而不难1.蠡口児武散，华人老哥‍‍‍‍‍‌‍‍‌‍‌‌‌‌‌‌‍‌人很好，做完题后还提醒我之后要问清楚各种可能的case
+2.无向图最短路径题
+3.蠡口司尔爸
+午饭面是hiring manager全程轰炸，最后都不记得自己吃了啥……
+最后一轮纯设计，主要问了一些mapreduce和hdfs的东西
+
+
+1. 买卖股票 从easy一直问到hard
+2. 数独 从medium的判断是不是valid 到 hard的solve 数独
+3. 从BST里面删除一个node (要求写te‍‍‍‍‍‌‍‍‌‍‌‌‌‌‌‌‍‌st case)
+
+design就是皮毛的问题。。。我几乎就是把Harvard那个intro system design 最后15min 照搬过去
+
+还有一万个behavior question。。。。。。。
+
+
+1) BQ + 蠡口耳散溜2) BQ + M‍‍‍‍‍‌‍‍‌‍‌‌‌‌‌‌‍‌inimizer 压缩字符串用index替换
+3) Lunch 时间很长估计有1个多小时也会提一些问题
+4) 给定range求key
+5) BQ + 如何实现elastic的 allocate storage
+
+第一轮：
+判断source string和pattern string是否match， ？代表任意一个字母，比如
+s = "Happy"
+p =‍‍‍‍‍‌‍‍‌‍‌‌‌‌‌‌‍‌ "H?pp?"
+这种情况就是match，然后？可以代表任意n个字母再判断
+
+第二轮： 
+
+蠡口妖妖
+
+午饭轮：
+和hm聊了俩做过的项目，剩下的时间都在聊男篮世界杯和约老师，一顿舔塞尔维亚，现在看塞尔维亚融化了不知道怎的有点开心。
+
+第三轮：
+LRU
+
+第四轮：
+word dictionary, 如何hash，如何判断一个string是一个句子 比如 ”goodluckhavefun“这种有超过一个的单词，如果”goodluckhavefunceeeeeeeb“就不是
+
 第一轮：问我分布式文件存储系统，一个很大的文件的存取流程是什么。我对这方面不太了解，扯了一点皮毛之后扯不下去了，直接跟面‍‍‍‍‍‌‍‍‌‍‌‌‌‌‌‌2‌试官说我不太懂呀
+
+topological order traverse。
+
+1. 给出一个<电影明星，电影作品>的字典和任意两个明星，找出他们之间的关系路径。例：约翰有作品1,2,3，汤姆有作品3,4, 山姆‍‍‍‍‍‌‍‍‌‍‌‌‌‌‌‌‍‌有作品4,5。求汤姆和山姆的路径，是约翰->3->汤姆->4->山姆.
+
+2. 给出两个链表节点和一个链表，调换这两个节点。
+
+$. 午饭轮，聊聊工作问题。
+
+3. 基本计算器。只有乘和加。再聊聊工作问题。
+
+4. 抬杠者 (意译)，聊聊工作问题。一个小系统设计，两个异地的数据中心，同时是读写库，怎么去同步数据。
+
+1. Hiring Manager 面, 主要聊项目，聊‍‍‍‍‍‌‍‍‌‍‌‌‌‌‌‌‍‌BQ， 聊他们做的东西
+2. 算法， 一个叫Flow Free的游戏要求写程序resolve之， 这个应该属于NP hard问题， 后来DFS搞的确实不太好写，写出来以后面官挺满意
+3. LC原题 search target in sorted array + search in rotated sorted array, 多谢同胞放水
+4. 算法，这一轮来了一个principal， 头发胡子银白跟洪七公似的， 问的是string s2里面出现在string s1里unique character的数量，题目不难，不过follow up挺多，比如S1特别大/S2特别大/单机能存下/单机存不下等等。感觉真正的高手就是能从一个看起来特别简单的题里面问出很多门道啊，问的我一身冷汗。。
+5. 系统设计轮，设计K-V store，用户分布在全球，要求尽量低的latency
+
+1. 给一个元素周期表和一个str，问str能否由周期表里面的某些元素组成
+2. 利口 衣衣期
+3. 吃饭聊天
+4. top ‍‍‍‍‍‌‍‍‌‍‌‌‌‌‌‌‍‌k
+5. basics on test, CICD, log, metrics, canary... 利口 思思尔
+
+第一面：设计电商网站的Inventory system。基本‍‍‍‍‍‌‍‍‌‍‌‌‌‌‌‌‍‌要求就是add cart的时候更新inventory system，同步异步更新，并发如何解决，还要写出API。
+第二面：java和c#的各种知识，能想起来的就是，比如java的composite和inheritance，java和c#的语言比较，那些特征你喜欢，c#里面的aync，await用法，写出json的格式，javascript的==和===，c# generic，delegation，lambda的语法，还有很多语言知识问题。
+第三面：过简历，比如问大数据排序如何做，aws lambda是如何实现的，各种排序算法的比较，TCP和UDP的比较。
+第四面：招人经理面，就是设计他们自己的系统，设计visual builder，讨论了很久visual builder的功能，最后基本就是简化成设计一个大数据的analytic service，这个非常非主流，基本准备不到，我用了正常的system design的东西，基本他都不满意，你需要用kafka+spark/mapreduce+zookeeper。如果没用过或者不清楚这些工具的很难说清楚。
+
+
 
 Done:
 The Maze: 做到 the maze III, 但是前两问不熟
