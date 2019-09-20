@@ -1,4 +1,5 @@
 https://www.1point3acres.com/bbs/forum.php?mod=forumdisplay&fid=145&filter=sortid&sortid=311&orderby=dateline 
+https://www.1point3acres.com/bbs/forum.php?mod=forumdisplay&fid=145&filter=sortid&sortid=311&orderby=dateline
 
 这个是compute 好好看
 第一轮：问我分布式文件存储系统，一个很大的文件的存取流程是什么。我对这方面不太了解，扯了一点皮毛之后扯不下去了，直接跟面试官说我不太懂呀。面试官说好吧那我来考你别的吧，于是问了我一道算法题：在棋盘上‍‍‍‍‍‌‍‍‌‍‌‌‌‌‌‌‍‌给一个起点一个终点，判断国际象棋里面的Knight（类似中国象棋里的马）是否能够从起点移到终点。我用的BFS, 但是貌似有更简单的方法。
@@ -78,7 +79,12 @@ $. 午饭轮，聊聊工作问题。
 第三面：过简历，比如问大数据排序如何做，aws lambda是如何实现的，各种排序算法的比较，TCP和UDP的比较。
 第四面：招人经理面，就是设计他们自己的系统，设计visual builder，讨论了很久visual builder的功能，最后基本就是简化成设计一个大数据的analytic service，这个非常非主流，基本准备不到，我用了正常的system design的东西，基本他都不满意，你需要用kafka+spark/mapreduce+zookeeper。如果没用过或者不清楚这些工具的很难说清楚。
 
-
+ done: 236 Lowest Common Ancestor Of A Binary Tree
+442
+117
+flow free: 
+        https://mzucker.github.io/2016/08/28/flow-solver.html 
+        https://blog.csdn.net/deepseazbw/article/details/81281628 
 
 Done:
 The Maze: 做到 the maze III, 但是前两问不熟
