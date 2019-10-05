@@ -1,6 +1,79 @@
 https://www.1point3acres.com/bbs/forum.php?mod=forumdisplay&fid=145&filter=sortid&sortid=311&orderby=dateline 
 https://www.1point3acres.com/bbs/forum.php?mod=forumdisplay&fid=145&filter=sortid&sortid=311&orderby=dateline
 
+1. 买卖股票 从easy一直问到hard
+2. 数独 从medium的判断是不是valid 到 hard的solve 数独
+3. 从BST里面删除一个node (要求写test case)
+
+design就是皮毛的问题。。。我几乎就是把Harvard那个intro system design‍‍‍‍‍‌‍‍‌‍‌‌‌‌‌‌‍‌ 最后15min 照搬过去
+
+1) BQ + 蠡口耳散溜2) BQ + Minimizer 压缩字符串用index替换
+3) Lunch 时间很长估计有1个多小时也会提一些问题
+4) 给定range求key
+5) BQ + 如何‍‍‍‍‍‌‍‍‌‍‌‌‌‌‌‌‍‌实现elastic的 allocate storage
+
+
+
+还有一万个behavior question。。。。。。。
+428
+无向图最短路径
+
+calculator:
+224
+227
+772
+770
+
+
+394
+
+第一轮：
+Done: 44. Wildcard Matching
+判断source string和pattern string是否match， ？代表任意一个字母，比如
+s = "Happy"
+p = "H?pp?"
+这种情况就是match，然后？可以代表任意n个字母再判断
+
+第二轮：
+done: 11 Container With Most Water
+蠡口妖妖
+
+午饭轮：
+和hm聊了俩做过的项目，剩下的时间都在聊男篮世界杯和约老师，一顿舔塞尔维亚，现在看塞尔维亚融化了不知道怎的有点开心。
+
+第三轮：
+Done:
+LRU
+
+第四轮：
+done: [208] Implement Trie (Prefix Tree)
+word dictionary, 如何hash，如何判断一个string是一个句子 比如 ”goodluckhavefun“这种有‍‍‍‍‍‌‍‍‌‍‌‌‌‌‌‌‍‌超过一个的单词，如果”goodluckhavefunceeeeeeeb“就不是
+这轮是bar raiser，讲了一会bq具体问啥我忘了，然后先是让我implement一个dictionary，我感觉应该是耳灵吧这样的，当时我还不会写trie，就说了用hashmap，然后说了下思路，他又问如何写这个hash function，我说把单词当做26进制"数字"得到一个id
+之后就说假如通过这个dictionary，可以让我用一个api叫isWord，可以用他来判断input是否是哥valid的句子，其实有点像妖思灵，如何从一个string找出都是word的substring，没有的话就return false。我就说recursion啊backtracking啥的 但是最后没时间完整实现了他就让我问他一些问题。
+这轮我俩聊得特别好，但是我不会写trie可能扣了分吧
+
+
+onsite:
+1. 问了简历。给一个binary tree和target number。return treenode的位置。具体位置可以自己定义。比如按preorder定义，从index0开始标记每个node的位置。
+
+
+2. lunch interview。和senior manager吃饭两天。我有一年工作经验但是senior还差得很远。很诧异为什么给我面试。。
+具体的问题有：1. 和manager有分歧怎么办。2. comment teammate的时候有disagree怎么办。3. 最自豪的一件事。然后深扣细节。
+3. 给一个int 2d array表示一个地图。每个点的值表示相对高度。要求从左上角走到右下角。且只能改变一次上下的方向。即，一开始往上走，然后可以有一次机会往下走。如果是平地就不算是改变方向。面试一开始就和我说，他要重点考察我test和另外一个什么能力（忘了，bq相关的）。我和他解释我的思路的时候他会听，但是我转过去写白板的时候他就会开始玩手机。code里面的corner case想了一段时间。给了大概10几分钟。code没有写完打断我问了很多关于test方面的问题。问的大多数问题我都不知道他在问什么。。必挂的一轮
+
+
+4. 给一个BST和一个target number，可以保证tree里有这个node。要求返回这个number的successor。一开始给了个O(n)的in order traverse的解。然后用stack记录parent找target node给了时间log(n)空间log(n)的解。要求优化空间，去掉stack，用一个variable记录往左子树走的parent，时间O(height), 空间O(1)。follow up是，如果target可能不存在。但是要是要返回比target number大的最小值。用一个variable记录遍历过的点如果比target大就更新。最后return这个点。
+
+
+5. 两个bar raiser轮番轰炸。1. 收到过哪些negative的feedback。2. 说一下自己miss deadline的事情。3. 和同事有conflict的时候怎么办。还有一些一下子想不起来了。
+
+来onsite之前，就看到一些消息说只要2年工作经验以上的SDE。当然就在想为什么我能拿到onsite。中午和senior manager面试的时候感觉他不怎么热情，不怎么想聊天。问了他一句你们接下来的招人计划，回我说要招senior。可以说很不给我面子。很尴尬了。
+
+
+总体的面试感觉是，算法题都不难。senior manager给我一种不怎么想面我的感觉。这个体验非常差。
+MOVE ON了！
+
+
 这个是compute 好好看
 第一轮：问我分布式文件存储系统，一个很大的文件的存取流程是什么。我对这方面不太了解，扯了一点皮毛之后扯不下去了，直接跟面试官说我不太懂呀。面试官说好吧那我来考你别的吧，于是问了我一道算法题：在棋盘上‍‍‍‍‍‌‍‍‌‍‌‌‌‌‌‌‍‌给一个起点一个终点，判断国际象棋里面的Knight（类似中国象棋里的马）是否能够从起点移到终点。我用的BFS, 但是貌似有更简单的方法。
 中午陪经理吃饭，一个半小时，聊得还算愉快
@@ -30,14 +103,15 @@ design就是皮毛的问题。。。我几乎就是把Harvard那个intro system 
 5) BQ + 如何实现elastic的 allocate storage
 
 第一轮：
-判断source string和pattern string是否match， ？代表任意一个字母，比如
+word pattern
+Doing:判断source string和pattern string是否match， ？代表任意一个字母，比如
 s = "Happy"
 p =‍‍‍‍‍‌‍‍‌‍‌‌‌‌‌‌‍‌ "H?pp?"
 这种情况就是match，然后？可以代表任意n个字母再判断
 
 第二轮： 
-
-蠡口妖妖
+Done:
+蠡口妖妖 11. Container With Most Water
 
 午饭轮：
 和hm聊了俩做过的项目，剩下的时间都在聊男篮世界杯和约老师，一顿舔塞尔维亚，现在看塞尔维亚融化了不知道怎的有点开心。
@@ -80,7 +154,7 @@ $. 午饭轮，聊聊工作问题。
 第四面：招人经理面，就是设计他们自己的系统，设计visual builder，讨论了很久visual builder的功能，最后基本就是简化成设计一个大数据的analytic service，这个非常非主流，基本准备不到，我用了正常的system design的东西，基本他都不满意，你需要用kafka+spark/mapreduce+zookeeper。如果没用过或者不清楚这些工具的很难说清楚。
 
  done: 236 Lowest Common Ancestor Of A Binary Tree
-442
+done: 442 Find All Duplicates in an Array
 117
 flow free: 
         https://mzucker.github.io/2016/08/28/flow-solver.html 
@@ -96,6 +170,7 @@ The Maze: 做到 the maze III, 但是前两问不熟
 
 done LC 56. Merge Intervals
 done:347 	Top K Frequent Elements 
+done: 20 valid parentheses
 
 done: 这题 属于DFS加BFS, 每次限制深度做dfs, 同时在dfs里需要剪枝 LC 126. Word Ladder II, BFS imp, then discuss how to 
 done: 417   Pacific Atlantic Water Flow   
@@ -122,7 +197,7 @@ Add 2 binary t‍‍‍‍‍‌‍‍‌‍‌‌‌‌‌‌2‌rees. 加完�
 
 
 Binary Search 
-4. Median of Two Sorted Arrays 
+done: 4. Median of Two Sorted Arrays 
 done: 154 稍微改一下。inital array是一个sorted的array，问你shift了多少次才会变成现在的array。做法一摸一样。就是把return的值变成index而已。
 
 
@@ -164,15 +239,6 @@ Many of them are from Amazon, so they also have the leadership questions like ho
 4. 抬杠者 (意译)，聊聊工作问题。一个小系统设计，两个异地的数据中心，同时是读写库，怎么去同步数据。
 
 
-我只到了电面：
-1. 问一个SQL，具体有两个TABLE，然后求出 每个DEPARTEMENT 的 平均工资‍‍‍‍‍‌‍‍‌‍‌‌‌‌‌‌2‌是多少， 要 GROUP BY 和 JOIN 一下
-2. 问到了 储存 密码，用STRING好 还是用 CHAR [] 好，并说出理由（网上有答案）
-3. 脑经急转弯， 有三个人在一个屋子里，每一个人知道自己的工资，但不知道别人的工资，怎么样才能知道三人的平均工资？ 每一个人都不能直接问别人工资是多少
-4. 窨井盖为什么是圆的
-
-再发一个我朋友的，电面面到了 2PC
-然后 问你 一个DB TABLE 里面有一个 COLUMN 存了性别，问你在这个 COLUMN上加 INDEX 有用吗
-
 onsite:
 1. 问了简历。给一个binary tree和target number。return treenode的位置。具体位置可以自己定义。比如按preorder定义，从index0开始标记每个node的位置。
 
@@ -191,10 +257,6 @@ onsite:
 补充内容 (2019-7-27 14:26):
 第二点说的话不通，有很多语病。。我想说的是，和senior manager吃饭聊天。senior manager说要招senior sde。但是我只有一年经验。我很诧异怎么就给我安排了面试。
 
-
-
-店面：
-‍‍‍‍‍‌‍‍‌‍‌‌‌‌‌‌2‌      忘记了，不是常规题，需求很长，然后算法简单。最后加问了下Java多线程的问题，AtomicInteger之类。
 
 Onsite：
      OCI很注重Culture fit，所以onsite之前，一定要把Recruiter发的OCI的Value好好看看，然后结合下自己的工作经历。
@@ -218,7 +280,7 @@ Onsite：
 第二题：一个简单的binary search
 2. lunch interview 一个半小时
 3. 三哥。一个room，一个robot，一些blocker，一个exit，robot可以走两种step，一种叫一小步move一个unit，一种叫一大步move两个unit。问走出去的最小step。bfs可以解
-4. 三哥。第一题 刷题网 斯而流，第二题 刷题网 而是
+4. 三哥。第一题 刷题网 斯而流，第二题 刷题网 而是 426 20
 5. bar raiser。白人大哥。问了一堆bq之后忽然开始做题（？？？）。一个叫flow free的游戏。一个2d board上有各种颜色的点，每种颜色的点有两个，要求把相同颜色的点两两相连，相连时线之间不可以交叉，如果可以满足要求return true，否则return false。自己define input，output。太特么难了吧，我想来想去觉得比airbnb那个boggle game还难。。。
 做法应该是dfs里面嵌套dfs，时间复杂度非常非常非常高，我写啊写也写不出来，面试官最后说，这个题很难，我面这个题面试里面还没有人做出来过。
 难的好想哭。。。谁会做。。。
@@ -286,7 +348,7 @@ mobile app 如何显示上万个data point。如果所有数据都传输给mobil
 
 
 
-西雅图的O‍‍‍‍‍‌‍‍‌‍‌‌‌‌‌‌2‌CI里一个team，是做O家cloud formation的五轮：
+西雅图的O‍‍‍‍‍‌‍‍‌‍‌‌‌‌‌‌CI里一个team，是做O家cloud formation的五轮：
 round1:白人小哥哥，人比较nice，互相介绍完以后coding，利口散就死，写完他拍了照片又扯了一些有的没的。
 round2:看着是华人，但是名字不像华人，应该是东南亚那边的。算法是利口而舅舅，利口巴斯散，写完拍照片结束，
 round3:lunch+hire manager面试， 问了非常多的BQ，感觉这个HM很care我目前工作习惯已经当前老板跟同事对我的评价， 然后让写了个LRU cache
