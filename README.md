@@ -138,6 +138,8 @@ graph:
 done: 207: course schedule 图 topologic sort
 1. 给一副有向图 问从a到b能不能到 返回true or false
 follow up 输出所以两‍‍‍‍‍‌‍‍‌‍‌‌‌‌‌‌2‌个点能到的路径
+253 児武散 meeting room I II
+428 司尔爸 https://leetcode.com/problems/serialize-and-deserialize-n-ary-tree/
 
 
 DP:
