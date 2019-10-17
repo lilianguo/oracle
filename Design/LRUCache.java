@@ -27,23 +27,114 @@ cache.get(3);       // returns 3
 cache.get(4);       // returns 4
 
 */
+// Double linkedlist
+class LRUCacheII {
+    private class Node{
+        Node prev;
+        Node next;
+        int key;
+        int value;
+
+        public Node(int key, int value) {
+            this.key = key;
+            this.value = value;
+            this.prev = null;
+            this.next = null;
+        }
+    }
+
+    private int capacity;
+    private HashMap<Integer, Node> hs = new HashMap<Integer, Node>();
+    private Node head = new Node(-1, -1);
+    private Node tail = new Node(-1, -1);
+
+    public LRUCache(int capacity) {
+        this.capacity = capacity;
+        tail.prev = head;
+        head.next = tail;
+    }
+
+    public int get(int key) {
+        if( !hs.containsKey(key)) {    		//key找不到
+            return -1;
+        }
+
+        // remove current
+        Node current = hs.get(key);
+        current.prev.next = current.next;
+        current.next.prev = current.prev;
+
+        // move current to tail
+        move_to_tail(current);			//每次get，使用次数+1，最近使用，放于尾部
+
+        return hs.get(key).value;
+    }
+
+    public void set(int key, int value) {			//数据放入缓存
+        // get 这个方法会把key挪到最末端，因此，不需要再调用 move_to_tail
+        if (get(key) != -1) {
+            hs.get(key).value = value;
+            return;
+        }
+
+        if (hs.size() == capacity) {		//超出缓存上限
+            hs.remove(head.next.key);		//删除头部数据
+            head.next = head.next.next;
+            head.next.prev = head;
+        }
+
+        Node insert = new Node(key, value);		//新建节点
+        hs.put(key, insert);
+        move_to_tail(insert);					//放于尾部
+    }
+
+    private void move_to_tail(Node current) {    //移动数据至尾部
+        current.prev = tail.prev;
+        tail.prev = current;
+        current.prev.next = current;
+        current.next = tail;
+    }
+}
+
+// singlely linked list
+
 class LRUCache {
     class ListNode {
-        int key, val;
-        ListNode next;
+        public int key, val;
+        public ListNode next;
+
         public ListNode(int key, int val) {
             this.key = key;
             this.val = val;
             this.next = null;
         }
     }
-    ListNode dummy, tail;
-    int capacity, size;
-    Map<Integer, ListNode> keyToPrev;
-    public LRUCache(int capacity) {
+
+    private int capacity, size;
+    private ListNode dummy, tail;
+    private Map<Integer, ListNode> keyToPrev;
+
+    public LRUCache (int capacity) {
+        this.capacity = capacity;
+        this.keyToPrev = new HashMap<Integer, ListNode>();
         this.dummy = new ListNode(0, 0);
         this.tail = this.dummy;
-        this.keyToPrev = new HashMap<>();
+    }
+
+    private void moveToTail(int key) {
+        ListNode prev = keyToPrev.get(key);
+        ListNode curr = prev.next;
+        if (curr == tail) {
+            return;
+        }
+        prev.next = prev.next.next;
+        tail.next = curr;
+
+        if (prev.next != null) {
+            keyToPrev.put(prev.next.key, prev);
+        }
+        keyToPrev.put(curr.key, tail);
+        tail = tail.next;
     }
 
     public int get(int key) {
@@ -54,43 +145,29 @@ class LRUCache {
         return tail.val;
     }
 
-    private void moveToTail(int key) {
-        ListNode prev = keyToPrev.get(key);
-        ListNode curr = prev.next;
-        if (curr == tail) {
-            return;
-        }
-
-        prev.next = prev.next.next;
-        if (prev.next != null) {
-            keyToPrev.put(prev.next.key, prev);
-        }
-        tail.next = curr;
-        keyToPrev.put(curr. tail);
-        tail = tail.next;
-        return;
-    }
-
-    public void put(int key, int value) {
+    public void set(int key, int value) {
         if (get(key) != -1) {
-            tail.val = value;
+            ListNode prev = keyToPrev.get(key);
+            prev.next.val = value;
             return;
         }
+        // set does not have this key
         if (size < capacity) {
+            // create a ListNode and put it to tail
             size++;
-            ListNode curr = new ListNode(key, value);
-            tail.next = curr;
-            keyToPrev.put(curr.key, tail);
-            tail = tail.next;
+            ListNode curt = new ListNode(key, value);
+            tail.next = curt;
+            keyToPrev.put(key, tail);
+            tail = tail.next; 
             return;
         }
-        // replace head with this node and move it to the ending
+
+        // create ListNode, replace the first node and moveToTail
         ListNode first = dummy.next;
-        keyToPrev.remove(first);
+        keyToPrev.remove(first.key);
         first.key = key;
-        first.val = value;
-        keyToPrev.put(first.key, dummy);
+        fisrt.val = value;
+        keyToPrev.put(key, dummy);
         moveToTail(key);
-        return;
     }
 }
